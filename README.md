@@ -1,6 +1,6 @@
 # Simon’s dotfiles
 
-OSX, fish, git, Homebrew (prerequisite).
+OSX, fish, git, Homebrew.
 
 ## Features
 
@@ -15,7 +15,7 @@ OSX, fish, git, Homebrew (prerequisite).
 <span style="color: #555;">sim</span><span style="color: #999;">@</span><span style="color: #555;">serveur</span><span style="color: #999;">:</span><span style="color: #555;">~/D/E/dotfiles</span><span style="color: #999;">:</span><span style="color: green;">master</span><span style="color: #999;">[</span><span style="color: green;">✓</span><span style="color: #999;">]</span>
 <span style="color: white;">▸</span>&nbsp;<span style="background-color: #555;">&nbsp;</span>
   </code></pre>
-  Note: inline styles are stripped on GitHub, so you must view this locally to see the proper colors above.
+  Note: view this README locally to see the colors above as inline styles are stripped on GitHub.
 - Homebrew formulae (`brew.bash`)
 - OSX settings (`osx.bash`)
 
@@ -23,6 +23,8 @@ The latter two borrow heavily from @mathiasbynens's [dotfiles](https://github.co
 
 
 ## Installation
+
+Prerequisite: Homebrew.
 
 1. `./bootstrap.bash` (or `./bootstrap.bash -f` to avoid the confirmation prompt)
 2. If necessary, add fish to the system shells and make it your default shell:
