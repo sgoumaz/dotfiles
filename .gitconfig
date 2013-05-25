@@ -1,0 +1,94 @@
+[alias]
+	# add
+	a = add
+	# checkout branch, creating it if necessary
+	go = checkout -B
+	# commit
+	c = commit
+	# commit all changes
+	ca = !git add -A && git commit -av
+	# credit an author on the latest commit
+	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+	# diff
+	d = diff
+	# diff: `git di $number` shows the diff between the state `$number` revisions ago and the current state
+	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+	# log
+	l = log
+	# pull
+	pl = pull
+	# pull including all submodules
+	ppl = !"git pull; git submodule foreach git pull origin master"
+	# push
+	ps = push
+	# undo push
+	undopush = push -f origin HEAD^:master
+	# status
+	s = status
+	# show verbose output about tags, branches or remotes
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	# Interactive rebase with the given number of latest commits
+	reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+[apply]
+	# detect whitespace errors when applying a patch
+	whitespace = fix
+
+[core]
+	excludesfile = ~/.gitignore
+	# treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
+	whitespace = space-before-tab,indent-with-non-tab,trailing-space
+
+[color]
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow
+	frag = white
+	old = red
+	new = green
+	plain = white dim
+[color "status"]
+	added = green
+	changed = blue
+	untracked = red
+
+[merge]
+	# include summaries of merged commits in newly created merge commit messages
+	log = true
+
+# always use `origin` as the default remote on the `master` branch
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+
+[remote "origin"]
+	push = HEAD
+
+[push]
+	default = simple
+
+# URL shorthands
+[url "git@github.com:"]
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+[url "git://github.com/"]
+	insteadOf = "github:"
+[url "git@gist.github.com:"]
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+[url "git://gist.github.com/"]
+	insteadOf = "gist:"
+
+# personal details
+
+[user]
+	email = simon@attentif.ch
+	name = Simon Goumaz
