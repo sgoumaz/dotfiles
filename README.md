@@ -5,17 +5,10 @@ OSX, fish, git, Homebrew.
 ## Features
 
 - Bootstrap script (`bootstrap.bash`) that syncs dotfiles to home dir, installs latest fish with Homebrew if missing and applies fish settings (universal vars)
-- fish config (`.config/fish`) including 2-line prompt with user, host, working-dir, git-status (assumes terminal with dark background); e.g.
-  <pre style="background-color: #333;"><code>
-<span style="color: #5f875f;">sim</span><span style="color: #999;">@</span><span style="color: #5f87af;">serveur</span><span style="color: #999;">:</span><span style="color: #87af5f;">~/D/E/dotfiles</span><span style="color: #999;">:</span><span style="color: red;">master</span><span style="color: #999;">[</span><span style="color: green;">+</span><span style="color: blue;">•</span><span style="color: magenta;">›</span><span style="color: #666;">-</span><span style="color: red;">?</span><span style="color: #999;">]</span>
-<span style="color: white;">▸</span>&nbsp;<span style="background-color: #555;">&nbsp;</span>
-  </code></pre>
-  The user, host and current working dir parts are dimmed when they don't change for less distraction; e.g.
-  <pre style="background-color: #333;"><code>
-<span style="color: #555;">sim</span><span style="color: #999;">@</span><span style="color: #555;">serveur</span><span style="color: #999;">:</span><span style="color: #555;">~/D/E/dotfiles</span><span style="color: #999;">:</span><span style="color: green;">master</span><span style="color: #999;">[</span><span style="color: green;">✓</span><span style="color: #999;">]</span>
-<span style="color: white;">▸</span>&nbsp;<span style="background-color: #555;">&nbsp;</span>
-  </code></pre>
-  Note: view this README locally to see the colors above as inline styles are stripped on GitHub.
+- fish config (`.config/fish`) including 2-line prompt with user, host, working dir, git status (assumes terminal with dark background); e.g. <br/>
+  <img src="http://sgoumaz.github.io/dotfiles/images/prompt-fresh.png" alt="Prompt example (fresh)"/><br/>
+  The user, host and current working dir parts are dimmed when they don't change for less distraction; e.g.<br/>
+  <img src="http://sgoumaz.github.io/dotfiles/images/prompt-dimmed.png" alt="Prompt example (dimmed)"/>
 - Homebrew formulae (`brew.bash`)
 - OSX settings (`osx.bash`)
 
@@ -42,7 +35,7 @@ Suggestions and improvements [welcome](https://github.com/sgoumaz/dotfiles/issue
 - Move git credentials away from `.gitconfig` to avoid accidental commits under my name
 - Check for possible other prerequisites (e.g. XCode)
 - Install Sublime Text plugins
-- Check for "required" apps?
+- Check for "minimal" set of apps?
 - Consider adding more functions (cf. [inspiration](https://github.com/mathiasbynens/dotfiles))
 
 
