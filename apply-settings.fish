@@ -17,7 +17,7 @@ set -U fish_color_match d7d7d7 --background=303030
 set -U fish_color_normal normal
 set -U fish_color_operator d7d7d7
 set -U fish_color_param 5f87af
-set -U fish_color_quote af875f
+set -U fish_color_quote d7af5f
 set -U fish_color_redirection normal
 set -U fish_color_search_match --background=purple
 set -U fish_color_status 5f0000

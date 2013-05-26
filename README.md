@@ -2,6 +2,7 @@
 
 OSX, fish, git, Homebrew.
 
+
 ## Features
 
 - Bootstrap script (`bootstrap.bash`) that syncs dotfiles to home dir, installs latest fish with Homebrew if missing and applies fish settings (universal vars)
