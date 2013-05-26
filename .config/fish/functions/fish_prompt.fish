@@ -12,24 +12,32 @@ function fish_prompt --description 'Write out the prompt'
   set host_color $fish_color_host
   set cwd_color $fish_color_cwd
 
-  # check changes and dim color if no change
+  # get current values
 
   set cur_user (whoami)
-  if test "$fish_prompt_last_user" = $cur_user -a "$fish_prompt_last_date" != $date
-    set user_color $fish_color_dimmed
-  end
-  set -g fish_prompt_last_user $cur_user
-
   set cur_host (hostname -s)
-  if test "$fish_prompt_last_host" = $cur_host -a "$fish_prompt_last_date" != $date
-    set host_color $fish_color_dimmed
-  end
-  set -g fish_prompt_last_host $cur_host
-
   set cur_cwd (prompt_pwd)
-  if test "$fish_prompt_last_cwd" = $cur_cwd -a "$fish_prompt_last_date" != $date
-    set cwd_color $fish_color_dimmed
+
+  # check changes and dim color if no change
+
+  if test "$fish_prompt_last_date" != $date
+    if test "$fish_prompt_last_user" = $cur_user
+      set user_color $fish_color_dimmed
+    end
+
+    if test "$fish_prompt_last_host" = $cur_host
+      set host_color $fish_color_dimmed
+    end
+
+    if test "$fish_prompt_last_cwd" = $cur_cwd
+      set cwd_color $fish_color_dimmed
+    end
   end
+
+  # save "last" values
+
+  set -g fish_prompt_last_user $cur_user
+  set -g fish_prompt_last_host $cur_host
   set -g fish_prompt_last_cwd $cur_cwd
 
   # HACK continuation (see above)

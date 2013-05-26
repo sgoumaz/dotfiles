@@ -43,7 +43,7 @@ Suggestions and improvements [welcome](https://github.com/sgoumaz/dotfiles/issue
 - Check for possible other prerequisites (e.g. XCode)
 - Install Sublime Text plugins
 - Check for "required" apps?
-- Consider adding more functions (cf. aliases/functions [there](https://github.com/mathiasbynens/dotfiles))
+- Consider adding more functions (cf. [inspiration](https://github.com/mathiasbynens/dotfiles))
 
 
 ## Thanks

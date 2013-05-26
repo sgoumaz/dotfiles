@@ -9,18 +9,15 @@ if [[ $? -ne 0 ]]; then
 fi
 
 # fix working dir
-
 cd "$(dirname "${BASH_SOURCE}")"
 
-# pull latest
-
+printf "\n# Pulling latest changes...\n"
 git pull
 if [[ $? -ne 0 ]]; then
   printf "\nWarning: git failed pulling the latest version (see details above).\n\n"
 fi
 
-# rsync to home dir
-
+printf "# Syncing to home folder...\n"
 function doSync() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "init" --exclude "*.bash" --exclude "apply-settings.fish" --exclude "*.md" --exclude "*.txt" -av . ~
 }
@@ -38,11 +35,10 @@ else
 fi
 unset doSync
 
-# install fish if needed
-
+printf "\n# Checking for fish... "
 brew ls fish &> /dev/null
 if [[ $? -ne 0 ]]; then
-  printf "\nfish not found, installing...\n\n"
+  printf "not found, installing...\n\n"
   brew update
   if [[ $? -ne 0 ]]; then
     printf "\nError: Homebrew update failed. Aborting.\n\n"
@@ -54,11 +50,11 @@ if [[ $? -ne 0 ]]; then
     exit 1
   fi
   printf "\nSee instructions above for making fish the default shell.\n"
+else
+  printf "ok.\n\n"
 fi
 
-# apply fish settings
-
-printf "\nSetting up/refreshing fish settings (i.e. universal variables)... "
+printf "# Setting up/refreshing fish settings (i.e. universal variables)... "
 fish apply-settings.fish
 if [[ $? -ne 0 ]]; then
   printf "\nError: applying fish settings failed.\n\n"
