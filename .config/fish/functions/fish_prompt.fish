@@ -16,7 +16,7 @@ function fish_prompt --description 'Write out the prompt'
 
   set cur_user (whoami)
   set cur_host (hostname -s)
-  set cur_cwd (prompt_pwd)
+  set cur_cwd (echo $PWD | sed -e "s|^$HOME|~|" -e 's|^/private||')
 
   # check changes and dim color if no change
 
