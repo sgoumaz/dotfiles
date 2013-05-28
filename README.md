@@ -1,17 +1,18 @@
 # Simon’s dotfiles
 
-OSX, fish, git, Homebrew.
+OSX, Homebrew, fish, git, Slate.
 
 
 ## Features
 
 - Bootstrap script (`bootstrap.bash`) that syncs dotfiles to home dir, installs latest fish with Homebrew if missing and applies fish settings (universal vars)
-- fish config (`.config/fish`) including 2-line prompt with user, host, working dir, git status (assumes terminal with dark background); e.g. <br/>
+- [fish](https://github.com/fish-shell/fish-shell) config (`.config/fish`) including 2-line prompt with user, host, working dir, git status (assumes terminal with dark background); e.g. <br/>
   <img src="http://sgoumaz.github.io/dotfiles/images/prompt-fresh.png" alt="Prompt example (fresh)"/><br/>
-  The user, host and current working dir parts are dimmed when they don't change for less distraction; e.g.<br/>
+  *Experimental hack: The user, host and current working dir parts are dimmed when they don't change for less distraction; e.g.*<br/>
   <img src="http://sgoumaz.github.io/dotfiles/images/prompt-dimmed.png" alt="Prompt example (dimmed)"/>
+- [Slate](https://github.com/jigish/slate) settings (minimal for now)
 - Homebrew formulae (`brew.bash`)
-- OSX settings (`osx.bash`)
+- OSX settings (`osx.bash`)—need a review
 
 The latter two borrow heavily from @mathiasbynens's [dotfiles](https://github.com/mathiasbynens/dotfiles).
 
@@ -28,16 +29,7 @@ Prerequisite: Homebrew.
 
 ## Feedback
 
-Suggestions and improvements [welcome](https://github.com/sgoumaz/dotfiles/issues)!
-
-
-## TODO
-
-- Move git credentials away from `.gitconfig` to avoid accidental commits under my name
-- Check for possible other prerequisites (e.g. XCode)
-- Install Sublime Text plugins
-- Check for "minimal" set of apps?
-- Consider adding more functions (cf. [inspiration](https://github.com/mathiasbynens/dotfiles))
+Suggestions and improvements [welcome](https://github.com/sgoumaz/dotfiles/issues).
 
 
 ## Thanks
