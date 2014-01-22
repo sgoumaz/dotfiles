@@ -23,6 +23,7 @@ brew install ack
 brew install git
 brew install ffmpeg
 brew install graphicsmagick
+brew install htop
 brew install mobile-shell
 brew install mysql
 
