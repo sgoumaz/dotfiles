@@ -18,6 +18,7 @@ brew install php54
 brew install ruby
 
 # Install everything else
+brew install ag
 brew install ack
 brew install git
 brew install ffmpeg
