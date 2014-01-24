@@ -37,5 +37,6 @@ function watchsync
   echo "# Start watching '$local', syncing changes to '$remote'..."
   echo ""
 
-  fswatch "$local" "date +%H:%M:%S && rsync -iru $excludeGit $excludeFromGitignore --delete '$local' '$remote'"
+  cd "$local"
+  fswatch . "date +%H:%M:%S && rsync -iru --size-only $excludeGit $excludeFromGitignore --delete . \"$remote\""
 end
