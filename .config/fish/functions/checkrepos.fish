@@ -5,6 +5,8 @@ function checkrepos
 
   set -l dirty 0
 
+  echo ""
+
   for file in *
     if not test -d "$file/.git"
       continue
@@ -30,6 +32,8 @@ function checkrepos
         set_color red; echo -n " ("(echo $local_changes)")"
       end
       set_color normal
+
+      echo ""
       echo ""
     end
 
