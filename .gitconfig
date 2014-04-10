@@ -1,6 +1,12 @@
 [alias]
 	# add
 	a = add
+	# checkout
+	co = checkout
+	# checkout usual branches
+	master = checkout master
+	staging = checkout staging
+	production = checkout production
 	# checkout branch, creating it if necessary
 	go = checkout -B
 	# commit
