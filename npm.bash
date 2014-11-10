@@ -9,3 +9,4 @@ npm install jshint -g
 npm install gh -g
 npm install plato -g
 npm install serve -g
+npm install trash -g
