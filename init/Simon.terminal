@@ -2,8 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BackgroundAlphaInactive</key>
+	<real>0.80288114161849711</real>
 	<key>BackgroundBlur</key>
-	<real>0.0</real>
+	<real>1</real>
+	<key>BackgroundBlurInactive</key>
+	<real>1</real>
 	<key>BackgroundColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -12,6 +16,8 @@
 	ZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhQXWRrbW90f4iQ
 	k5yusbYAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAuA==
 	</data>
+	<key>BackgroundSettingsForInactiveWindows</key>
+	<true/>
 	<key>CursorColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -24,19 +30,21 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGGBlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKQHCBESVSRudWxs1AkKCwwNDg8QVk5TU2l6ZVhOU2ZGbGFnc1ZOU05hbWVWJGNs
-	YXNzI0AsAAAAAAAAEBCAAoADXxASVWJ1bnR1TW9uby1SZWd1bGFy0hMUFRZaJGNsYXNz
-	bmFtZVgkY2xhc3Nlc1ZOU0ZvbnSiFRdYTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLR
-	GhtUcm9vdIABCBEaIy0yNzxCS1JbYmlydHZ4jZKdpq2wucvO0wAAAAAAAAEBAAAAAAAA
-	ABwAAAAAAAAAAAAAAAAAAADV
+	YXNzI0AqAAAAAAAAEBCAAoADXxAXQXRsYXNUeXBld3JpdGVyLVJlZ3VsYXLSExQVFlok
+	Y2xhc3NuYW1lWCRjbGFzc2VzVk5TRm9udKIVF1hOU09iamVjdF8QD05TS2V5ZWRBcmNo
+	aXZlctEaG1Ryb290gAEIERojLTI3PEJLUltiaXJ0dniSl6KrsrW+0NPYAAAAAAAAAQEA
+	AAAAAAAAHAAAAAAAAAAAAAAAAAAAANo=
 	</data>
 	<key>FontAntialias</key>
 	<true/>
+	<key>FontHeightSpacing</key>
+	<real>1.05</real>
 	<key>FontWidthSpacing</key>
-	<real>0.99596774193548387</real>
+	<integer>1</integer>
 	<key>Linewrap</key>
 	<true/>
 	<key>ProfileCurrentVersion</key>
-	<real>2.02</real>
+	<real>2.04</real>
 	<key>SelectionColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
