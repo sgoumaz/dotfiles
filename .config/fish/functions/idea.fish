@@ -1,3 +1,3 @@
 function idea
-  open -a /Applications/IntelliJ\ IDEA\ 13.app/
+  open -a /Applications/IntelliJ\ IDEA\ 14.app/
 end
