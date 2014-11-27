@@ -21,6 +21,7 @@ brew install ruby
 brew install ag
 brew install ack
 brew install git
+brew install git-extras
 brew install ffmpeg
 brew install graphicsmagick
 brew install htop
