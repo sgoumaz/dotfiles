@@ -9,5 +9,5 @@ npm install jshint -g
 npm install gh -g
 npm install grunt-cli -g
 npm install plato -g
-npm install serve -g
+npm install puer -g
 npm install trash -g
