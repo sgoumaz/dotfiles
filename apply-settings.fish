@@ -45,3 +45,11 @@ set -U fish_pager_color_completion normal
 set -U fish_pager_color_description 555 yellow
 set -U fish_pager_color_prefix cyan
 set -U fish_pager_color_progress cyan
+
+
+# custom: commonly used locations
+
+set -U projets "/Users/sim/Dropbox/Projets"
+set -U dotfiles "/Users/sim/Dropbox/Environnement/dotfiles"
+set -U at_gh "/Users/sim/Dropbox/Projets/attentif/GitHub"
+set -U pryv_dev "/Users/sim/Dropbox/Projets/Pryv/2012-Pryv/dev"
