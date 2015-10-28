@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: review according to https://github.com/herrbischoff/awesome-osx-command-line
+
 # ~/.osx — http://mths.be/osx
 
 # Ask for the administrator password upfront
