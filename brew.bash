@@ -26,6 +26,7 @@ brew install ffmpeg
 brew install graphicsmagick
 brew install htop
 brew install mobile-shell
+brew install sf-pwgen
 # brew install mysql
 
 # Remove outdated versions from the cellar
