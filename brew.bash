@@ -21,6 +21,7 @@ brew upgrade
 brew install ag
 brew install git
 brew install git-extras
+brew install gpg2
 brew install httpie
 brew install ffmpeg
 brew install graphicsmagick
