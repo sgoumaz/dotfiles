@@ -12,3 +12,6 @@ n 8.9.1
 
 # expose PATH to graphical apps
 launchctl setenv PATH $PATH
+
+# autojump
+[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish

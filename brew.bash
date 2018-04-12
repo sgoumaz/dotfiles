@@ -8,6 +8,7 @@ brew upgrade
 
 # Install everything else
 brew install ag
+brew install autojump
 brew install fd
 brew install git
 brew install git-extras
