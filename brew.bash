@@ -9,6 +9,7 @@ brew upgrade
 # Install everything else
 brew install ag
 brew install autojump
+brew install bat
 brew install bettercap
 brew install fd
 brew install git
