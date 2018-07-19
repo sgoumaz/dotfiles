@@ -11,4 +11,4 @@ npm install grunt-cli -g
 npm install npm-check-updates -g
 npm install plato -g
 npm install puer -g
-npm install trash -g
+npm install trash-cli -g
