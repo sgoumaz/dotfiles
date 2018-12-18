@@ -1,7 +1,5 @@
 [alias]
-	# add
 	a = add
-	# checkout
 	co = checkout
 	# checkout usual branches
 	master = checkout master
@@ -9,27 +7,22 @@
 	production = checkout production
 	# checkout branch, creating it if necessary
 	go = checkout -B
-	# commit
 	c = commit
 	# commit all changes
 	ca = !git add -A && git commit -av
 	# credit an author on the latest commit
 	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
-	# diff
 	d = diff
 	# diff: `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
-	# log
 	l = log
-	# pull
 	pl = pull
 	# pull including all submodules
 	ppl = !"git pull; git submodule foreach git pull origin master"
-	# push
 	ps = push
+	qs = quick-stats
 	# undo push
 	undopush = push -f origin HEAD^:master
-	# status
 	s = status
 	# show verbose output about tags, branches or remotes
 	tags = tag -l

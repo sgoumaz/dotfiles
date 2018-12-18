@@ -14,14 +14,14 @@ brew install bettercap
 brew install fd
 brew install git
 brew install git-extras
+brew install git-quick-stats
 brew install gpg2
 brew install httpie
 brew install ffmpeg
 brew install graphicsmagick
 brew install htop
-brew install mobile-shell
+brew install mosh
 brew install sf-pwgen
-# brew install mysql
 
 # Remove outdated versions from the cellar
 brew cleanup
