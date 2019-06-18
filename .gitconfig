@@ -1,5 +1,6 @@
 [alias]
 	a = add
+	aa = add --all
 	co = checkout
 	# checkout usual branches
 	master = checkout master
