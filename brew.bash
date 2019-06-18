@@ -11,6 +11,7 @@ brew install ag
 brew install autojump
 brew install bat
 brew install bettercap
+brew install docker
 brew install fd
 brew install git
 brew install git-extras
