@@ -7,7 +7,6 @@ brew update
 brew upgrade
 
 # Install everything else
-brew install ag
 brew install autojump
 brew install bat
 brew install bettercap
@@ -23,6 +22,7 @@ brew install graphicsmagick
 brew install htop
 brew install mosh
 brew install python
+brew install ripgrep
 brew install sf-pwgen
 
 # Remove outdated versions from the cellar
