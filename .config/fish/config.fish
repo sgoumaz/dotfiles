@@ -8,7 +8,7 @@ set -x PATH $HOME"/.cargo/bin" $PATH
 set -x NODE_PATH "/usr/local/lib/node" "/usr/local/lib/node_modules" $NODE_PATH
 
 # node (current version, via n)
-n 8.11.1
+n 12.12.0
 
 # expose PATH to graphical apps
 launchctl setenv PATH $PATH
