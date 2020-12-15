@@ -39,12 +39,12 @@ bind g:ctrl;alt;cmd     grid 0:3,2 1:3,2
 bind n:ctrl;alt;cmd     throw next resize
 bind w:ctrl;alt;cmd     hint 1234567890
 
-bind a:ctrl;alt         focus 'Atom'
-bind c:ctrl;alt         focus 'Calendrier'
+bind a:ctrl;alt         focus 'Aperçu'
+bind c:ctrl;alt         focus 'Visual Studio Code'
 bind f:ctrl;alt         focus 'Firefox'
 bind f:ctrl;alt;shift   focus 'Finder'
-bind i:ctrl;alt         focus 'IntelliJ IDEA'
 bind m:ctrl;alt         focus 'MailMate'
 bind n:ctrl;alt         focus 'FSNotes'
+bind n:ctrl;alt;shift   focus 'Notion'
 bind r:ctrl;alt         focus 'Rappels'
 bind t:ctrl;alt         focus 'Terminal'
