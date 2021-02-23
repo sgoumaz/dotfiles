@@ -13,5 +13,8 @@ n lts
 # VS Code
 set -x PATH $PATH "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+# PHP composer
+set -x PATH $PATH $HOME"/.composer/vendor/bin"
+
 # autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
