@@ -2,8 +2,6 @@
 
 # setup fish universal variables
 
-set -U EDITOR 'code'
-
 set -U fish_color_autosuggestion 555 yellow
 set -U fish_color_command 5f87d7
 set -U fish_color_comment 808080
