@@ -12,6 +12,7 @@ brew install bat
 brew install bettercap
 brew install composer
 brew install docker
+brew install espanso
 brew install fd
 brew install git
 brew install git-extras
