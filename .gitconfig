@@ -4,6 +4,7 @@
 	co = checkout
 	# checkout usual branches
 	master = checkout master
+	main = checkout main
 	staging = checkout staging
 	production = checkout production
 	# checkout branch, creating it if necessary
