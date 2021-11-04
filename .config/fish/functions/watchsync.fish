@@ -1,7 +1,7 @@
 function watchsync
   #
-  # Keep local path in sync with remote path
-  # Ignore .git metadata if present
+  # Watches local folder and keeps remote folder in sync
+  # Ignores .git metadata if present
   #
 
   set -l local $argv[1]

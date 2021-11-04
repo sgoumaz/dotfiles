@@ -21,6 +21,9 @@ function checkrepos
     end
 
     # it's a git repo
+    set_color --bold white
+    echo -n "$file "
+    set_color normal
 
     cd $file
 
@@ -32,14 +35,11 @@ function checkrepos
     if test "$remote_changes" != "0" -o "$local_changes" != "0"
       set dirty 1
 
-      set_color --bold white
-      echo -n "$file"
-      set_color normal
       if test "$remote_changes" != "0"
-        set_color yellow; echo -n " ("(echo $remote_changes)")"
+        set_color yellow; echo -n "("(echo $remote_changes)")"
       end
       if test "$local_changes" != "0"
-        set_color red; echo -n " ("(echo $local_changes)")"
+        set_color red; echo -n "("(echo $local_changes)")"
       end
 
       if test "$pull" = "1"
