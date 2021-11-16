@@ -5,7 +5,6 @@
 npm update -g
 
 npm install n -g
-npm install gh -g
 npm install grunt-cli -g
 npm install live-server -g
 npm install npm-check-updates -g

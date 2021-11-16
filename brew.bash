@@ -14,6 +14,7 @@ brew install composer
 brew install docker
 brew install espanso
 brew install fd
+brew install gh
 brew install git
 brew install git-extras
 brew install git-quick-stats
