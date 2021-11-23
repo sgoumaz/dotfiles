@@ -16,7 +16,7 @@ function prompt_git_status --description 'Write out the git status'
 
   set_color $fish_color_separator; echo -n ':'
 
-  set -l index (git status --porcelain ^/dev/null|cut -c 1-2|sort -u)
+  set -l index (git status --porcelain 2>/dev/null|cut -c 1-2|sort -u)
 
   if test -z "$index"
     set_color $fish_color_git_clean; echo -n $branch
