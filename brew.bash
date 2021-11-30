@@ -10,6 +10,7 @@ brew upgrade
 brew install autojump
 brew install bat
 brew install bettercap
+brew install bind
 brew install composer
 brew install docker
 brew install espanso
