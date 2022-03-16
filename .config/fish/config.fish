@@ -1,6 +1,6 @@
 # PATH
 # - Homebrew
-set -x PATH ""(brew --prefix)"/bin" $PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
 # - Rust
 set -x PATH $HOME"/.cargo/bin" $PATH
 # - VS Code
@@ -17,4 +17,4 @@ n lts
 set -x EDITOR "code"
 
 # autojump
-[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+[ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
