@@ -1,6 +1,6 @@
 # Simon’s dotfiles
 
-OSX, Homebrew, fish, git, Slate.
+Homebrew, fish, git, Slate.
 
 
 ## Features
@@ -12,19 +12,16 @@ OSX, Homebrew, fish, git, Slate.
   <img src="http://sgoumaz.github.io/dotfiles/images/prompt-dimmed.png" alt="Prompt example (dimmed)"/>
 - [Slate](https://github.com/jigish/slate) settings (minimal for now)
 - Homebrew formulae (`brew.bash`)
-- OSX settings (`osx.bash`)—need a review
-
-The latter two borrow heavily from @mathiasbynens's [dotfiles](https://github.com/mathiasbynens/dotfiles).
 
 
 ## Installation
 
-Prerequisite: Homebrew.
+Prerequisites: MacOS command-line tools, Homebrew.
 
 1. `./bootstrap.bash` (or `./bootstrap.bash -f` to avoid the confirmation prompt)
 2. If necessary, add fish to the system shells and make it your default shell:
-    - Add `/usr/local/bin/fish` to `/etc/shells`
-    - `chsh -s /usr/local/bin/fish`
+    - `which fish >> /etc/shells`
+    - `chsh -s $(which fish)`
 
 
 ## Feedback

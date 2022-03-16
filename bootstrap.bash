@@ -64,3 +64,7 @@ if [[ $? -ne 0 ]]; then
 else
   printf "done.\n\n"
 fi
+
+printf "# To install manually if missing:\n\n"
+printf "1. Node.js → https://nodejs.org/ \n"
+printf "2. n → `npm install -g n`\n"
