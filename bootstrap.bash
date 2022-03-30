@@ -4,7 +4,7 @@
 
 which brew &> /dev/null
 if [[ $? -ne 0 ]]; then
-  printf "\nError: Homebrew not installed\n\n"
+  printf "\nError: Expected Homebrew to be installed; see https://brew.sh/#install \n\n"
   exit 1
 fi
 
@@ -57,7 +57,7 @@ else
 fi
 
 printf "# Setting up/refreshing fish settings (i.e. universal variables)... "
-fish apply-settings.fish
+./apply-settings.fish
 if [[ $? -ne 0 ]]; then
   printf "\nError: applying fish settings failed.\n\n"
   exit 1
@@ -65,6 +65,25 @@ else
   printf "done.\n\n"
 fi
 
-printf "# To install manually if missing:\n\n"
-printf "1. Node.js → https://nodejs.org/ \n"
-printf "2. n → `npm install -g n`\n"
+printf "# Checking for \`node\`... "
+which node &> /dev/null
+if [[ $? -ne 0 ]]; then
+  printf "not found; please install from https://nodejs.org/ \n\n"
+else
+  printf "ok.\n\n"
+
+  printf "# Checking for \`n\`... "
+  which n &> /dev/null
+  if [[ $? -ne 0 ]]; then
+    printf "not found, installing...\n\n"
+    npm install -g n
+    if [[ $? -ne 0 ]]; then
+      printf "\nError: installing \`n\` failed.\n\n"
+      exit 1
+    else
+      printf "done.\n\n"
+    fi
+  else
+    printf "ok.\n\n"
+  fi
+fi
