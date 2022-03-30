@@ -17,10 +17,24 @@ alias top               move screenOriginX;screenOriginY                        
 alias bottom            move screenOriginX;screenOriginY+screenSizeY/2               screenSizeX;screenSizeY/2
 alias left              move screenOriginX;screenOriginY                             screenSizeX/2;screenSizeY
 alias right             move screenOriginX+screenSizeX/2;screenOriginY               screenSizeX/2;screenSizeY
+
 alias top-left          move screenOriginX;screenOriginY                             screenSizeX/2;screenSizeY/2
 alias bottom-left       move screenOriginX;screenOriginY+screenSizeY/2               screenSizeX/2;screenSizeY/2
 alias top-right         move screenOriginX+screenSizeX/2;screenOriginY               screenSizeX/2;screenSizeY/2
 alias bottom-right      move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2
+
+alias left-3rd          move screenOriginX;screenOriginY                               screenSizeX/3;screenSizeY
+alias center-3rd        move screenOriginX+screenSizeX/3;screenOriginY                 screenSizeX/3;screenSizeY
+alias right-3rd         move screenOriginX+2*screenSizeX/3;screenOriginY               screenSizeX/3;screenSizeY
+alias left-2-3rds       move screenOriginX;screenOriginY                               screenSizeX*2/3;screenSizeY
+alias right-2-3rds      move screenOriginX+screenSizeX/3;screenOriginY                 screenSizeX*2/3;screenSizeY
+
+alias top-left-3rd      move screenOriginX;screenOriginY                               screenSizeX/3;screenSizeY/2
+alias bottom-left-3rd   move screenOriginX;screenOriginY+screenSizeY/2                 screenSizeX/3;screenSizeY/2
+alias top-center-3rd    move screenOriginX+screenSizeX/3;screenOriginY                 screenSizeX/3;screenSizeY/2
+alias bottom-center-3rd move screenOriginX+screenSizeX/3;screenOriginY+screenSizeY/2   screenSizeX/3;screenSizeY/2
+alias top-right-3rd     move screenOriginX+2*screenSizeX/3;screenOriginY               screenSizeX/3;screenSizeY/2
+alias bottom-right-3rd  move screenOriginX+2*screenSizeX/3;screenOriginY+screenSizeY/2 screenSizeX/3;screenSizeY/2
 
 # Bindings
 
@@ -30,10 +44,24 @@ bind up:ctrl;alt;cmd    ${top}
 bind down:ctrl;alt;cmd  ${bottom}
 bind left:ctrl;alt;cmd  ${left}
 bind right:ctrl;alt;cmd ${right}
+
 bind u:ctrl;alt;cmd     ${top-left}
 bind j:ctrl;alt;cmd     ${bottom-left}
 bind i:ctrl;alt;cmd     ${top-right}
 bind k:ctrl;alt;cmd     ${bottom-right}
+
+bind pad4:ctrl;alt;cmd     ${left-3rd}
+bind pad5:ctrl;alt;cmd     ${center-3rd}
+bind pad6:ctrl;alt;cmd     ${right-3rd}
+bind pad4:ctrl;alt;cmd;shift ${left-2-3rds}
+bind pad6:ctrl;alt;cmd;shift ${right-2-3rds}
+
+bind pad7:ctrl;alt;cmd     ${top-left-3rd}
+bind pad1:ctrl;alt;cmd     ${bottom-left-3rd}
+bind pad8:ctrl;alt;cmd     ${top-center-3rd}
+bind pad2:ctrl;alt;cmd     ${bottom-center-3rd}
+bind pad9:ctrl;alt;cmd     ${top-right-3rd}
+bind pad3:ctrl;alt;cmd     ${bottom-right-3rd}
 
 bind g:ctrl;alt;cmd     grid 0:3,2 1:3,2
 bind n:ctrl;alt;cmd     throw next resize
@@ -47,4 +75,5 @@ bind g:ctrl;alt         focus 'GoodTask'
 bind m:ctrl;alt         focus 'MailMate'
 bind n:ctrl;alt         focus 'Obsidian'
 bind n:ctrl;alt;shift   focus 'Notion'
+bind s:ctrl;alt         focus 'Slack'
 bind t:ctrl;alt         focus 'Terminal'
