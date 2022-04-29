@@ -69,7 +69,7 @@ bind w:ctrl;alt;cmd     hint 1234567890
 
 bind a:ctrl;alt         focus 'Aperçu'
 bind c:ctrl;alt         focus 'Code'
-bind f:ctrl;alt         focus 'Firefox'
+bind f:ctrl;alt         focus 'Firefox Developer Edition'
 bind f:ctrl;alt;shift   focus 'Finder'
 bind g:ctrl;alt         focus 'GoodTask'
 bind m:ctrl;alt         focus 'MailMate'
