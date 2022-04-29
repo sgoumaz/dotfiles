@@ -2,11 +2,11 @@
 # - Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # - Rust
-set -x PATH $HOME"/.cargo/bin" $PATH
+fish_add_path $HOME"/.cargo/bin"
 # - VS Code
-set -x PATH $PATH "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+fish_add_path --append "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # - PHP composer
-set -x PATH $PATH $HOME"/.composer/vendor/bin"
+fish_add_path --append $HOME"/.composer/vendor/bin"
 
 # node (default)
 set -x NODE_PATH "/usr/local/lib/node" "/usr/local/lib/node_modules" $NODE_PATH
