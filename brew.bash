@@ -23,6 +23,7 @@ brew install git-quick-stats
 brew install httpie
 brew install graphicsmagick
 brew install htop
+brew install macos-trash
 brew install mosh
 brew install ripgrep
 brew install sf-pwgen

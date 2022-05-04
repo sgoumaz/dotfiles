@@ -43,3 +43,8 @@ set -U fish_pager_color_completion normal
 set -U fish_pager_color_description 555 yellow
 set -U fish_pager_color_prefix cyan
 set -U fish_pager_color_progress cyan
+
+# abbreviations
+
+abbr --add g git
+abbr --add t trash
