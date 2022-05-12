@@ -11,6 +11,7 @@ brew upgrade
 brew install autojump
 brew install bat
 brew install bettercap
+brew install broot
 brew install bind
 brew install composer
 brew install docker
