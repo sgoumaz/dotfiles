@@ -45,23 +45,30 @@ function fish_prompt --description 'Write out the prompt'
 
   # write prompt
 
-  set_color $user_color;           echo -n $cur_user
+  set_color $user_color
+  echo -n $cur_user
 
-  set_color $fish_color_separator; echo -n '@'
+  set_color $fish_color_separator
+  echo -n '@'
 
-  set_color $host_color;           echo -n $cur_host
+  set_color $host_color
+  echo -n $cur_host
 
-  set_color $fish_color_separator; echo -n ':'
+  set_color $fish_color_separator
+  echo -n ':'
 
-  set_color $cwd_color;            echo -n $cur_cwd
-
-  set_color normal;                prompt_git_status
-
-  echo
-  if not test $last_status -eq 0
-    set_color $fish_color_error
-  end
-  echo -n '▸ '
+  set_color --bold $cwd_color
+  echo -n $cur_cwd
 
   set_color normal
+  prompt_git_status
+
+  if test $TERM_PROGRAM != "WarpTerminal"
+    echo
+    if not test $last_status -eq 0
+      set_color $fish_color_error
+    end
+    echo -n '▸ '
+    set_color normal
+  end
 end
