@@ -26,6 +26,7 @@ brew install graphicsmagick
 brew install htop
 brew install macos-trash
 brew install mosh
+brew install python
 brew install ripgrep
 brew install sf-pwgen
 brew install syncthing
