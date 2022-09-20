@@ -11,6 +11,9 @@ fish_add_path --append $HOME"/.composer/vendor/bin"
 # node (default)
 set -x NODE_PATH "/usr/local/lib/node" "/usr/local/lib/node_modules" $NODE_PATH
 # node (current version, via n)
+set -x N_PREFIX $HOME/.n
+fish_add_path $N_PREFIX/bin
+
 n lts
 
 # EDITOR
