@@ -72,13 +72,13 @@ if [[ $? -ne 0 ]]; then
 else
   printf "ok.\n\n"
 
-  printf "# Checking for \`n\`... "
-  which n &> /dev/null
+  printf "# Checking for \`fnm\`... "
+  which fnm &> /dev/null
   if [[ $? -ne 0 ]]; then
     printf "not found, installing...\n\n"
-    npm install -g n
+    brew install fnm
     if [[ $? -ne 0 ]]; then
-      printf "\nError: installing \`n\` failed.\n\n"
+      printf "\nError: installing \`fnm\` failed.\n\n"
       exit 1
     else
       printf "done.\n\n"
