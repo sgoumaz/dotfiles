@@ -49,4 +49,5 @@ set -U fish_pager_color_progress cyan
 # List: long format, include dot files, human-friendly file sizes
 abbr --add la ls -lAh
 abbr --add g git
+abbr --add gaa git a --all
 abbr --add t trash
