@@ -1,6 +1,6 @@
 # Simon’s dotfiles
 
-Homebrew, fish, git, Slate.
+Homebrew, fish, git, Hammerspoon…
 
 
 ## Features
@@ -10,7 +10,7 @@ Homebrew, fish, git, Slate.
   <img src="http://sgoumaz.github.io/dotfiles/images/prompt-fresh.png" alt="Prompt example (fresh)"/><br/>
   *Experimental hack: The user, host and current working dir parts are dimmed when they don't change for less distraction; e.g.*<br/>
   <img src="http://sgoumaz.github.io/dotfiles/images/prompt-dimmed.png" alt="Prompt example (dimmed)"/>
-- [Slate](https://github.com/jigish/slate) settings (minimal for now)
+- [Hammerspoon](https://www.hammerspoon.org/) settings
 - Homebrew formulae (`brew.bash`)
 
 

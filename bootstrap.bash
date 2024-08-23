@@ -21,7 +21,7 @@ fi
 
 printf "# Syncing to home folder...\n"
 function doSync() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "init" --exclude "*.bash" --exclude "apply-settings.fish" --exclude "*.md" --exclude "*.txt" -av . ~
+	rsync --exclude ".git/" --exclude ".vscode" --exclude ".DS_Store" --exclude "init" --exclude "*.bash" --exclude "apply-settings.fish" --exclude "*.md" --exclude "*.txt" -av . ~
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doSync
