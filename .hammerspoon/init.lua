@@ -104,10 +104,10 @@ spoon.MiroWindowsManager:bindHotkeys({
     right = {keys.hyper, "right"},
     down = {keys.hyper, "down"},
     left = {keys.hyper, "left"},
-    fullscreen = {keys.hyper, "f"},
+    fullscreen = {keys.hyper, "m"},
 })
 
-hs.hotkey.bind(keys.hyper, "c", "Move window center", function()
+hs.hotkey.bind(keys.hyper, "x", "Move window center", function()
     local win = hs.window.focusedWindow()
     win:centerOnScreen()
 end)
