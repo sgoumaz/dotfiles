@@ -20,7 +20,7 @@ local apps = {
     notes = "Obsidian",
     Numbers = "Numbers",
     Signal = "Signal",
-    terminal = "Warp",
+    terminal = "Ghostty",
     Telegram = "Telegram",
     WhatsApp = "WhatsApp",
 }
