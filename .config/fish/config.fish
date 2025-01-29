@@ -20,5 +20,5 @@ fnm env --use-on-cd | source
 # EDITOR
 set -x EDITOR "code"
 
-# autojump
-[ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
+# zoxide
+zoxide init fish | source
