@@ -19,6 +19,7 @@ local apps = {
     mail = "MailMate",
     notes = "Obsidian",
     Numbers = "Numbers",
+    Orion = "Orion",
     Signal = "Signal",
     terminal = "Ghostty",
     Telegram = "Telegram",
@@ -40,6 +41,8 @@ local appBindings = {
     { key = "g", app = apps.GoodTask },
     { key = "m", app = apps.mail },
     { key = "n", app = apps.notes },
+    { key = "N", app = apps.Numbers },
+    { key = "o", app = apps.Orion },
     { key = "s", app = apps.Signal },
     { key = "t", app = apps.terminal },
     { key = "T", app = apps.Telegram },
@@ -48,7 +51,24 @@ local appBindings = {
 
 for _, binding in ipairs(appBindings) do
     hs.hotkey.bind(string.match(binding.key, "%u") and keys.appUpper or keys.app, binding.key, binding.app, function()
-        hs.application.launchOrFocus(binding.app)
+        local focusedWin = hs.window.focusedWindow()
+        local focusedApp = focusedWin:application()
+        local focusedName = focusedApp:name()
+        -- HACK: fix VS Code name issue (name on disk and app name differ)
+        if focusedName == "Code" then focusedName = apps.code end
+        if focusedName == binding.app then
+            -- app is focused already ⇒ cycle through its windows
+            local appWindows = focusedApp:visibleWindows()
+            for i, win in ipairs(appWindows) do
+                if win == focusedWin then
+                    appWindows[i % #appWindows + 1]:focus()
+                    break
+                end
+            end
+        else
+            -- app is not focused
+            hs.application.launchOrFocus(binding.app)
+        end
     end)
 end
 
@@ -64,6 +84,7 @@ local appSets = {
             apps.Firefox,
             apps.notes,
             apps.Numbers,
+            apps.Orion,
             apps.terminal,
         },
     },
@@ -117,7 +138,7 @@ hs.hotkey.bind(keys.hyper, "n", "Move window to next screen", function()
     win:moveToScreen(win:screen():next())
 end)
 
-function nudgeWindow(xDir, yDir)
+local function nudgeWindow(xDir, yDir)
     local win = hs.window.focusedWindow()
     local screenMode = win:screen():currentMode()
     win:move({x = xDir * screenMode.w / 10, y = yDir * screenMode.h / 10})
@@ -138,6 +159,7 @@ local oneScreenLayout = {
     {apps.GoodTask, nil, screens.laptop, hs.layout.maximized, nil, nil},
     {apps.mail, nil, screens.laptop, hs.layout.maximized, nil, nil},
     {apps.notes, nil, screens.laptop, hs.layout.maximized, nil, nil},
+    {apps.Orion, nil, screens.laptop, hs.layout.maximized, nil, nil},
     {apps.Signal, nil, screens.laptop, hs.layout.left50, nil, nil},
     {apps.Telegram, nil, screens.laptop, hs.layout.right50, nil, nil},
     {apps.code, nil, screens.laptop, hs.layout.maximized, nil, nil},
@@ -150,6 +172,7 @@ local twoScreenLayout = {
     {apps.GoodTask, nil, screens.laptop, hs.layout.maximized, nil, nil},
     {apps.mail, nil, screens.laptop, hs.layout.maximized, nil, nil},
     {apps.notes, nil, screens.external, hs.layout.right50, nil, nil},
+    {apps.Orion, nil, screens.external, centerPos, nil, nil},
     {apps.Signal, nil, screens.laptop, hs.layout.left50, nil, nil},
     {apps.Telegram, nil, screens.laptop, hs.layout.right50, nil, nil},
     {apps.code, nil, screens.laptop, centerPos, nil, nil},
@@ -162,6 +185,10 @@ hs.hotkey.bind(keys.hyper, "1", "Apply one-screen layout", function()
 end)
 hs.hotkey.bind(keys.hyper, "2", "Apply two-screen layout", function()
     hs.layout.apply(twoScreenLayout)
+end)
+
+hs.hotkey.bind(keys.hyper, "a", "Show current app info", function()
+    hs.alert.show(hs.application.frontmostApplication())
 end)
 
 -- Display keybindings
