@@ -11,7 +11,6 @@ local keys = {
 }
 
 local apps = {
-    BlueMail = "BlueMail",
     code = "Visual Studio Code",
     Firefox = "Firefox Developer Edition",
     Finder = "Finder",
@@ -34,7 +33,6 @@ local screens = {
 -- Launching/focusing apps
 
 local appBindings = {
-    { key = "b", app = apps.BlueMail },
     { key = "c", app = apps.code },
     { key = "f", app = apps.Firefox },
     { key = "F", app = apps.Finder },
@@ -93,7 +91,6 @@ local appSets = {
         description = "communication",
         visible = true,
         apps = {
-            apps.BlueMail,
             apps.GoodTask,
             apps.mail,
             apps.Signal,
@@ -154,7 +151,6 @@ hs.hotkey.bind(keys.superHyper, "left", "Nudge window left", function() nudgeWin
 local centerPos = {x=0.2, y=0, w=0.6, h=1}
 
 local oneScreenLayout = {
-    {apps.BlueMail, nil, screens.laptop, hs.layout.maximized, nil, nil},
     {apps.Firefox, nil, screens.laptop, hs.layout.maximized, nil, nil},
     {apps.GoodTask, nil, screens.laptop, hs.layout.maximized, nil, nil},
     {apps.mail, nil, screens.laptop, hs.layout.maximized, nil, nil},
@@ -167,7 +163,6 @@ local oneScreenLayout = {
     {apps.WhatsApp, nil, screens.laptop, hs.layout.right50, nil, nil},
 }
 local twoScreenLayout = {
-    {apps.BlueMail, nil, screens.laptop, hs.layout.maximized, nil, nil},
     {apps.Firefox, nil, screens.external, centerPos, nil, nil},
     {apps.GoodTask, nil, screens.laptop, hs.layout.maximized, nil, nil},
     {apps.mail, nil, screens.laptop, hs.layout.maximized, nil, nil},
