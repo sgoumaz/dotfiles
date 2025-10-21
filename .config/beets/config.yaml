@@ -1,0 +1,10 @@
+directory: ~/Music/Bibliothèque
+plugins: fish convert musicbrainz discogs fetchart lyrics
+import:
+  copy: yes
+  write: yes
+  incremental: yes
+convert:
+  never_convert_lossy_files: yes
+  auto: yes
+  format: flac
