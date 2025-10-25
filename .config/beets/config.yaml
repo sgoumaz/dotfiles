@@ -1,5 +1,9 @@
 directory: ~/Music/Bibliothèque
 plugins: fish convert musicbrainz discogs fetchart lyrics
+paths:
+  default: $albumartist/$original_year - $album%aunique{}/$track $title
+  singleton: Non-Album/$artist/$title
+  comp: Compilations/$original_year - $album%aunique{}/$track $title
 import:
   copy: yes
   write: yes
@@ -8,3 +12,8 @@ convert:
   never_convert_lossy_files: yes
   auto: yes
   format: flac
+fetchart:
+  minwidth: 900
+  maxwidth: 2000
+lyrics:
+  auto: yes
