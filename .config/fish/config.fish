@@ -8,8 +8,6 @@ fish_add_path $HOME"/.cargo/bin"
 fish_add_path --append "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # - PHP composer
 fish_add_path --append $HOME"/.composer/vendor/bin"
-# - MacTex
-fish_add_path --append "/Library/TeX/texbin"
 
 # node (default)
 set -x NODE_PATH "/usr/local/lib/node" "/usr/local/lib/node_modules" $NODE_PATH
@@ -22,3 +20,10 @@ set -x EDITOR "code"
 
 # zoxide
 zoxide init fish | source
+
+# abbreviations
+abbr --add l eza
+abbr --add la eza -la # long format, include dot files
+abbr --add g git
+abbr --add gaa git a --all
+abbr --add t trash

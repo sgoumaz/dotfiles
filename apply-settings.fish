@@ -44,10 +44,7 @@ set -U fish_pager_color_description 555 yellow
 set -U fish_pager_color_prefix cyan
 set -U fish_pager_color_progress cyan
 
-# abbreviations
+# other
 
-# List: long format, include dot files, human-friendly file sizes
-abbr --add la ls -lAh
-abbr --add g git
-abbr --add gaa git a --all
-abbr --add t trash
+# TODO: check fisher then check plugins: tide
+tide configure --auto --style=Classic --prompt_colors='True color' --classic_prompt_color=Darkest --show_time=No --classic_prompt_separators=Vertical --powerline_prompt_heads=Round --powerline_prompt_tails=Flat --powerline_prompt_style='Two lines, character' --prompt_connection=Dotted --powerline_right_prompt_frame=No --prompt_connection_andor_frame_color=Darkest --prompt_spacing=Compact --icons='Few icons' --transient=Yes
