@@ -1,5 +1,5 @@
 directory: ~/Music/Bibliothèque
-plugins: fish convert musicbrainz discogs fetchart lyrics
+plugins: fish convert fromfilename musicbrainz discogs fetchart lyrics
 paths:
   default: $albumartist/$original_year - $album%aunique{}/$track $title
   singleton: Non-Album/$artist/$title
