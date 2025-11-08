@@ -1,0 +1,26 @@
+[[mgr.prepend_keymap]]
+on = "R"
+run = "rename --empty=stem --cursor=start"
+desc = "Easy rename"
+
+[[input.prepend_keymap]]
+on   = "<Esc>"
+run  = "close"
+desc = "Cancel input"
+
+# MacOS preview on ^P
+[[mgr.prepend_keymap]]
+on = "<C-p>"
+run = 'shell -- qlmanage -p "$@"'
+
+# Plugins
+
+# toggle-pane
+[[mgr.prepend_keymap]]
+on   = "<S-p>"
+run  = "plugin toggle-pane min-parent"
+desc = "Show or hide the parent pane"
+[[mgr.prepend_keymap]]
+on   = "p"
+run  = "plugin toggle-pane min-preview"
+desc = "Show or hide the preview pane"

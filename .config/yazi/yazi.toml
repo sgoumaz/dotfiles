@@ -1,0 +1,7 @@
+[mgr]
+ratio = [1, 4, 3]
+linemode = "mtime_and_size"
+
+[preview]
+max_width = 1600
+max_height = 2000
