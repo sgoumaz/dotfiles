@@ -15,7 +15,7 @@ local function time_string(time)
 	elseif os.date("%Y", time) == os.date("%Y") then
 		return string.format("%2d %s %02d:%02d", date.day, os.date("%b", time), date.hour, date.min)
 	else
-        return string.format("%2d %s %d ", date.day, os.date("%b", time), date.year)
+        return ui.Line { ui.Span(string.format("%2d %s", date.day, os.date("%b", time))):dim(), string.format(" %d ", date.year) }
 	end
 end
 
@@ -34,19 +34,20 @@ end
 
 -- CUSTOMISE LINE MODE
 
--- Show modified time and size
-function Linemode:mtime_and_size()
-    local time_s = time_string(self._file.cha.mtime)
-
+-- Show size and modified time
+function Linemode:size_and_mtime()
 	local size = self._file:size()
     local size_s
     if size then
 		size_s = ya.readable_size(size)
 	else
 		local folder = cx.active:history(self._file.url)
-		size_s = folder and tostring(#folder.files) or ""
+		size_s = folder and ui.Line { ui.Span("󰙅"):dim(), tostring(#folder.files) } or ""
 	end
-	return string.format("%s %6s", time_s, size_s)
+
+	local time_s = time_string(self._file.cha.mtime)
+
+	return ui.Line { size_s, "  ", time_s }
 end
 
 -- CUSTOMISE STATUS BAR
@@ -70,12 +71,13 @@ Status:children_add(function()
 	end
 
 	return ui.Line {
-		ui.Span(ya.user_name(h.cha.uid) or tostring(h.cha.uid)):fg("magenta"),
-		":",
-		ui.Span(ya.group_name(h.cha.gid) or tostring(h.cha.gid)):fg("magenta"),
+		" ",
+		ui.Span(ya.user_name(h.cha.uid) or tostring(h.cha.uid)):fg("yellow"),
+		ui.Span(":"):dim(),
+		ui.Span(ya.group_name(h.cha.gid) or tostring(h.cha.gid)):fg("yellow"),
 		" ",
 	}
-end, 500, Status.RIGHT)
+end, 1100, Status.RIGHT)
 -- Show symlink
 Status:children_add(function(self)
 	local h = self._current.hovered

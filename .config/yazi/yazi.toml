@@ -1,6 +1,6 @@
 [mgr]
 ratio = [1, 4, 3]
-linemode = "mtime_and_size"
+linemode = "size_and_mtime"
 
 [preview]
 max_width = 1600

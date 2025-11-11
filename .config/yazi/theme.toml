@@ -3,4 +3,4 @@ dark = "catppuccin-macchiato"
 
 [status]
 sep_left = { open = "", close = "" }
-sep_right = { open = " ", close = "" }
+sep_right = { open = "", close = "" }
