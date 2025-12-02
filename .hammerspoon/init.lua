@@ -11,7 +11,7 @@ local keys = {
 }
 
 local apps = {
-    code = "Visual Studio Code",
+    code = "VSCodium",
     Firefox = "Firefox Developer Edition",
     Finder = "Finder",
     GoodTask = "GoodTask",
