@@ -10,17 +10,17 @@ desc = "Cancel input"
 
 # MacOS preview on ^P
 [[mgr.prepend_keymap]]
-on = "<C-p>"
+on = "<D-p>"
 run = 'shell -- qlmanage -p "$@"'
 
 # Plugins
 
 # toggle-pane
 [[mgr.prepend_keymap]]
-on   = "<S-p>"
+on   = "<C-S-p>"
 run  = "plugin toggle-pane min-parent"
 desc = "Show or hide the parent pane"
 [[mgr.prepend_keymap]]
-on   = "p"
+on   = "<C-p>"
 run  = "plugin toggle-pane min-preview"
 desc = "Show or hide the preview pane"
