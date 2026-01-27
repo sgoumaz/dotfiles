@@ -37,6 +37,7 @@ brew install bettercap
 # brew install bind # up-to-date DNS tools
 brew install httpie
 brew install mosh
+brew install snitch
 brew install syncthing
 
 # media
@@ -50,8 +51,10 @@ brew install btop # system monitor
 brew install espanso
 # ⚠️ must `yabai --uninstall-service` before upgrade, then `yabai --start-service` again
 brew install koekeishiya/formulae/yabai
+brew install mole # system clean up
 brew install sf-pwgen
 brew install visidata
+brew install witr # Why Is This Running?
 
 # Remove outdated versions from the cellar
 brew cleanup
