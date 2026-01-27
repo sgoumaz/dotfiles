@@ -1,0 +1,205 @@
+:root {
+  --dracula-background: #282a36;
+  --dracula-foreground: #f8f8f2;
+  --dracula-current-line: #44475a;
+  --dracula-comment: #6272a4;
+  --dracula-black: #21222c;
+  --dracula-red: #ff5555;
+  --dracula-orange: #ffb86c;
+  --dracula-yellow: #f1fa8c;
+  --dracula-green: #50fa7b;
+  --dracula-purple: #bd93f9;
+  --dracula-cyan: #8be9fd;
+  --dracula-pink: #ff79c6;
+  --dracula-bright-cyan: #a4ffff;
+
+  /* Generic */
+  --tridactyl-font-family: monospace;
+  --tridactyl-font-family-sans: monospace;
+  --tridactyl-font-size: 16px;
+  --tridactyl-small-font-size: 12px;
+  --tridactyl-bg: var(--dracula-background);
+  --tridactyl-fg: var(--dracula-comment);
+  --tridactyl-scrollbar-color: auto;
+
+  /* Mode Indicator */
+  --tridactyl-status-font-family: var(--tridactyl-font-family);
+  --tridactyl-status-font-size: var(--tridactyl-small-font-size);
+  --tridactyl-status-bg: rgba(0, 0, 0, 0.5);
+  --tridactyl-status-fg: var(--dracula-foreground);
+  --tridactyl-status-border: 0;
+  --tridactyl-status-border-radius: 6px;
+
+  /* Hint Character Tags */
+  --tridactyl-hintspan-font-family: var(--tridactyl-font-family);
+  --tridactyl-hintspan-font-size: var(--tridactyl-small-font-size);
+  --tridactyl-hintspan-font-weight: bold;
+  --tridactyl-hintspan-fg: var(--dracula-black);
+  --tridactyl-hintspan-bg: var(--dracula-green);
+  --tridactyl-hintspan-border-width: 0;
+  --tridactyl-hintspan-js-background: var(--dracula-red);
+
+  /* Hint Element Highlights */
+  --tridactyl-hint-bg: none;
+  --tridactyl-hint-outline: 0;
+  --tridactyl-hint-active-fg: none;
+  --tridactyl-hint-active-bg: none;
+  --tridactyl-hint-active-outline: 0;
+
+  /* :viewsource */
+  --tridactyl-vs-bg: var(--dracula-black);
+  --tridactyl-vs-fg: var(--dracula-comment);
+  --tridactyl-vs-font-family: var(--tridactyl-font-family);
+
+  /* Commandline */
+  --tridactyl-cmdl-bg: var(--dracula-background);
+  --tridactyl-cmdl-fg: var(--dracula-foreground);
+  --tridactyl-cmdl-line-height: 1.6;
+  --tridactyl-cmdl-font-family: monospace;
+  --tridactyl-cmdl-font-size: var(--tridactyl-small-font-size);
+
+  /* Completions */
+  --tridactyl-cmplt-option-height: 1.4em;
+  --tridactyl-cmplt-fg: var(--dracula-comment);
+  --tridactyl-cmplt-bg: var(--dracula-background);
+  --tridactyl-cmplt-font-size: var(--tridactyl-small-font-size);
+  --tridactyl-cmplt-font-family: monospace;
+  --tridactyl-cmplt-border-top: 0;
+
+  /* Header */
+  --tridactyl-header-first-bg: var(--dracula-black);
+  --tridactyl-header-second-bg: var(--dracula-black);
+  --tridactyl-header-third-bg: var(--dracula-black);
+  --tridactyl-header-font-size: inherit;
+  --tridactyl-header-font-weight: normal;
+  --tridactyl-header-border-bottom: 0;
+
+  /* URL Style */
+  --tridactyl-url-text-decoration: none;
+  --tridactyl-url-fg: var(--dracula-green);
+  --tridactyl-url-bg: none;
+  --tridactyl-url-cursor: pointer;
+
+  /* Handle the selected URL's color */
+  --tridactyl-photon-colours-accent-1: var(--dracula-green);
+
+  /* Option Focused */
+  --tridactyl-of-fg: var(--dracula-foreground);
+  --tridactyl-of-bg: var(--dracula-current-line);
+
+  /* New Tab Page Spoiler Box (Changelog) */
+  --tridactyl-highlight-box-bg: var(--dracula-black);
+  --tridactyl-highlight-box-fg: var(--dracula-comment);
+  --tridactyl-photon-colours-in-content-box-border-color: var(--dracula-black) !important;
+
+  /* Private Window Icon */
+  --tridactyl-private-window-icon-url: url("chrome://browser/skin/privateBrowsing.svg");
+
+  /* Container Icons */
+  --tridactyl-container-fingerprint-url: url("resource://usercontext-content/fingerprint.svg");
+  --tridactyl-container-briefcase-url: url("resource://usercontext-content/briefcase.svg");
+  --tridactyl-container-dollar-url: url("resource://usercontext-content/dollar.svg");
+  --tridactyl-container-cart-url: url("resource://usercontext-content/cart.svg");
+  --tridactyl-container-circle-url: url("resource://usercontext-content/circle.svg");
+  --tridactyl-container-gift-url: url("resource://usercontext-content/gift.svg");
+  --tridactyl-container-vacation-url: url("resource://usercontext-content/vacation.svg");
+  --tridactyl-container-food-url: url("resource://usercontext-content/food.svg");
+  --tridactyl-container-fruit-url: url("resource://usercontext-content/fruit.svg");
+  --tridactyl-container-pet-url: url("resource://usercontext-content/pet.svg");
+  --tridactyl-container-tree-url: url("resource://usercontext-content/tree.svg");
+  --tridactyl-container-chill-url: url("resource://usercontext-content/chill.svg");
+
+  /* Container Colors */
+  --tridactyl-container-color-blue: var(--dracula-cyan);
+  --tridactyl-container-color-turquoise: var(--dracula-bright-cyan);
+  --tridactyl-container-color-green: var(--dracula-green);
+  --tridactyl-container-color-yellow: var(--dracula-yellow);
+  --tridactyl-container-color-orange: var(--dracula-orange);
+  --tridactyl-container-color-red: var(--dracula-red);
+  --tridactyl-container-color-pink: var(--dracula-pink);
+  --tridactyl-container-color-purple: var(--dracula-purple);
+}
+
+/*
+# Private Windows
+
+Mode Indicator: This has a white background by default, which didn't work so
+well with the Dracula foreground color (#f8f8f2).
+
+Icon Color: The default black SVG icon color doesn't contrast enough with the
+Dracula background color.
+*/
+
+.TridactylPrivate {
+  background: none !important;
+}
+
+.TridactylOwnNamespace .option.incognito .privatewindow {
+  fill: var(--dracula-comment) !important;
+}
+
+/*
+# Tridactyl New Tab Page
+
+Remove the red and green backgrounds from the changelog button/toggle.
+
+> According to ScreenRant, Craven landed on the color scheme after reading in a
+> scientific article that humans have an especially hard time processing the
+> colors red and green together. As Live Science explains, red light causes
+> retinal cells called opponent neurons to fire—thus alerting our brain that
+> we’re seeing red—while green light doesn’t cause them to do anything (a lack
+> of motion that our brain knows to perceive as green). Since these actions
+> cancel each other out, seeing certain shades of red and green simultaneously
+> can be a little optically confusing (Gutoskey).
+
+---
+Gutoskey, Ellen. “The Smart—and Scientific—Reason Freddy Krueger’s
+  Sweater Is Red and Green-Striped.” Mental Floss, 27 October 2020,
+  https://www.mentalfloss.com/article/633068/why-freddy-krueger-wears-red-and-green.
+*/
+
+#trinewtab #nagbar-changelog {
+  background: var(--dracula-current-line) !important;
+  color: var(--dracula-pink) !important;
+}
+
+#trinewtab input[id^="spoiler"] + label {
+  background: var(--dracula-comment) !important;
+  color: var(--dracula-foreground) !important;
+}
+
+/*
+# Tridactyl Help Page
+
+Use the Dracula color theme on the `:help` page.
+*/
+
+.TridactylOwnNamespace .tsd-flag {
+  background-color: var(--dracula-current-line) !important;
+  color: var(--dracula-foreground) !important;
+}
+
+.TridactylOwnNamespace .tsd-panel,
+.TridactylOwnNamespace .tsd-signature,
+.TridactylOwnNamespace .tsd-index-panel h3 {
+  border-width: 1px !important;
+  border-color: var(--dracula-current-line) !important;
+}
+
+.TridactylOwnNamespace .tsd-signature-symbol,
+.TridactylOwnNamespace .tsd-sources {
+  color: var(--dracula-current-line) !important;
+}
+
+.TridactylOwnNamespace .hljs-keyword {
+  color: var(--dracula-purple) !important;
+}
+
+.TridactylOwnNamespace .hljs-string {
+  color: var(--dracula-yellow) !important;
+}
+
+.TridactylOwnNamespace .hljs-title,
+.TridactylOwnNamespace .hljs-comment {
+  color: var(--dracula-foreground) !important;
+}

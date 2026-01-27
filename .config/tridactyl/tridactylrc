@@ -1,0 +1,8 @@
+" General Settings
+set update.lastchecktime 1769505385211
+set configversion 2.0
+set smoothscroll true
+set theme dracula
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
