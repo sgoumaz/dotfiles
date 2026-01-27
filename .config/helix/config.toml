@@ -1,0 +1,10 @@
+theme = "jellybeans"
+
+[editor]
+trim-final-newlines = true
+trim-trailing-whitespace = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"
