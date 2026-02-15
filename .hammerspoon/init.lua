@@ -14,7 +14,6 @@ local keys = {
 local apps = {
     code = "VSCodium",
     Finder = "Finder",
-    GoodTask = "GoodTask",
     mail = "MailMate",
     notes = "Obsidian",
     Numbers = "Numbers",
@@ -35,7 +34,6 @@ local screens = {
 local appBindings = {
     { key = "c", app = apps.code },
     { key = "F", app = apps.Finder },
-    { key = "g", app = apps.GoodTask },
     { key = "m", app = apps.mail },
     { key = "n", app = apps.notes },
     { key = "N", app = apps.Numbers },
@@ -90,7 +88,6 @@ local appSets = {
         description = "communication",
         visible = true,
         apps = {
-            apps.GoodTask,
             apps.mail,
             apps.Signal,
             apps.WhatsApp,
@@ -257,7 +254,6 @@ end)
 
 -- local oneScreenLayout = {
 --     {apps.Firefox, nil, screens.laptop, hs.layout.maximized, nil, nil},
---     {apps.GoodTask, nil, screens.laptop, hs.layout.maximized, nil, nil},
 --     {apps.mail, nil, screens.laptop, hs.layout.maximized, nil, nil},
 --     {apps.notes, nil, screens.laptop, hs.layout.maximized, nil, nil},
 --     {apps.Orion, nil, screens.laptop, hs.layout.maximized, nil, nil},
@@ -268,7 +264,6 @@ end)
 -- }
 -- local twoScreenLayout = {
 --     {apps.Firefox, nil, screens.external, centerPos, nil, nil},
---     {apps.GoodTask, nil, screens.laptop, hs.layout.maximized, nil, nil},
 --     {apps.mail, nil, screens.laptop, hs.layout.maximized, nil, nil},
 --     {apps.notes, nil, screens.external, hs.layout.right50, nil, nil},
 --     {apps.Orion, nil, screens.external, centerPos, nil, nil},

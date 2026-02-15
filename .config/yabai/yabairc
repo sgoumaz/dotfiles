@@ -22,7 +22,6 @@ yabai -m rule --add app="^Ghostty$" native-fullscreen=on
 yabai -m rule --add app="^VSCodium$" display=^1
 yabai -m rule --add app="^VSCodium$" native-fullscreen=on
 yabai -m rule --add app="^Obsidian$" display=^1
-yabai -m rule --add app="^GoodTask$" display=^2
 yabai -m rule --add app="^MailMate$" display=^2
 yabai -m rule --add app="^Signal$" display=^2
 yabai -m rule --add app="^WhatsApp$" display=^2
