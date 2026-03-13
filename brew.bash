@@ -49,8 +49,9 @@ brew install kew
 # other system utils
 brew install btop # system monitor
 brew install espanso
-# ⚠️ must `yabai --uninstall-service` before upgrade, then `yabai --start-service` again
-brew install koekeishiya/formulae/yabai
+brew tap FelixKratz/formulae
+brew install borders
+brew services start borders
 brew install mole # system clean up
 brew install sf-pwgen
 brew install visidata
