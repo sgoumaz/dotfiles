@@ -8,6 +8,8 @@ fish_add_path $HOME"/.cargo/bin"
 fish_add_path --append "/Applications/VSCodium.app/Contents/Resources/app/bin"
 # - PHP composer
 fish_add_path --append $HOME"/.composer/vendor/bin"
+# - Obsidian
+fish_add_path /Applications/Obsidian.app/Contents/MacOS
 
 # node (default)
 set -x NODE_PATH "/usr/local/lib/node" "/usr/local/lib/node_modules" $NODE_PATH
