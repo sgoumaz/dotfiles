@@ -1,0 +1,25 @@
+# dossiers synchronisés
+root = /Users/sim/Documents/2_Domaines/Enseignement
+root = /Volumes/Goumaz-S/Enseignement
+
+# ne pas synchroniser si ce chemin relatif n'existe pas de part ou d'autre
+mountpoint = Obsidian
+
+# force la prise en compte de la casse
+ignorecase = false
+
+# fichiers/dossiers ignorés
+ignore = Name _Archive
+ignore = Name _Archived Items
+ignore = Name ._*
+ignore = Name .DS_Store
+ignore = Name .git
+ignore = Name .obsidian*
+ignore = Name Desktop.ini
+
+# valider les propositions
+auto = true
+# synchroniser les dates
+times = true
+# conserver la version la plus récente du fichier (↔︎ times)
+force = newer

@@ -1,0 +1,24 @@
+# dossiers synchronisés
+root = /Users/sim/Music/Bibliothèque
+root = /Volumes/SIM-MUSIQUE/Musique
+
+# ne pas synchroniser si ce chemin relatif n'existe pas de part ou d'autre
+mountpoint = The Beatles
+
+# sync unidirectionnelle
+force = /Users/sim/Music/Bibliothèque
+noupdate = /Users/sim/Music/Bibliothèque
+
+# ignorer les attributs
+perms = 0
+dontchmod = true
+
+# fichiers/dossiers ignorés
+ignore = Name _Archive
+ignore = Name _Archived Items
+ignore = Name ._*
+ignore = Name .DS_Store
+ignore = Name Desktop.ini
+
+# valider les propositions
+auto = true

@@ -20,6 +20,7 @@ brew install mmv # batch file rename
 brew install poppler # lib for PDF rendering
 brew install ripgrep # `rg`, file content searching
 brew install sevenzip # `7zz`, archives
+brew install unison # files sync
 brew install yazi # `y`, file explorer
 brew install zoxide # `z`, historical directories navigation
 
@@ -33,28 +34,26 @@ brew install python # more up-to-date than the MacOS version
 brew install typst
 
 # networking & sync
-brew install bettercap
+brew install bettercap # network/BT/etc. scanning + sniffing with web UI
 # brew install bind # up-to-date DNS tools
-brew install httpie
-brew install mosh
-brew install snitch
-brew install syncthing
+brew install httpie # HTTP client (API testing etc.)
+brew install mosh # mobile shell (SSH with intermittent connectivity)
+brew install snitch # connections inspector (friendlier ss/netstat)
+brew install syncthing # P2P files sync between devices
 
 # media
 brew install exiftool
 brew install fontforge
 brew install graphicsmagick
-brew install kew
+brew install kew # music player
 
 # other system utils
 brew install btop # system monitor
-brew install espanso
-brew tap FelixKratz/formulae
-brew install borders
-brew services start borders
+brew install espanso # text expander
+brew tap FelixKratz/formulae && brew install borders && brew services start borders # window borders
 brew install mole # system clean up
-brew install sf-pwgen
-brew install visidata
+brew install sf-pwgen # password generator
+brew install visidata # tabular data explorer
 brew install witr # Why Is This Running?
 
 # Remove outdated versions from the cellar
