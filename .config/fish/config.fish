@@ -2,6 +2,8 @@
 # - Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 fish_add_path /opt/homebrew/bin
+# - uv etc.
+fish_add_path $HOME"/.local/bin"
 # - Rust
 fish_add_path $HOME"/.cargo/bin"
 # - VSCodium commands i.e. `codium`
