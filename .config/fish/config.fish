@@ -22,6 +22,9 @@ fnm env --use-on-cd | source
 # EDITOR
 set -x EDITOR "codium"
 
+# Unison: set fixed hostname to ensure archives are found (cf. Unison%20User%20Manual.html#archives)
+set -x UNISONLOCALHOSTNAME "MacBookPro"
+
 # zoxide
 zoxide init fish | source
 
